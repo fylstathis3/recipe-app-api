@@ -194,3 +194,10 @@ class PrivateRecipeApiTests(TestCase):
         self.assertEqual(recipe.price, payload['price'])
         tags = recipe.tags.all()
         self.assertEqual(len(tags), 0)
+
+        # res = self.client.get(
+        #     RECIPES_URL,
+        #     {'tags': f'{tag1.id},{tag2.id}'}
+        # )
+
+        # res = self.client.get(TAGS_URL, {'assigned_only': 1})
